@@ -28,8 +28,7 @@ public class CameraController : MonoBehaviour
     {
         mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, pointCamera.transform.position, speedTranslateCamera * Time.fixedDeltaTime);
         mainCamera.transform.LookAt(targetLook);
-        transform.Rotate(0, Input.GetAxis("Mouse X") * speedRotateCamera, 0);
-        Debug.Log(Input.GetAxis("Mouse X"));
+      
     }
 
 

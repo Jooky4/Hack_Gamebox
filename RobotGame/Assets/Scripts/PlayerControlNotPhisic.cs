@@ -5,9 +5,12 @@
 public class PlayerControlNotPhisic : MonoBehaviour
 {
     // т.к. логика движения изменилась мы выставили меньшее и более стандартное значение
-    public float Speed = 5f;
-
-    public float JumpForce = 300f;
+    [SerializeField]
+    private float Speed = 5f;
+    [SerializeField]
+    private float JumpForce = 300f;
+    [SerializeField]
+    private float speedRotateCamera = 1;
 
     //что бы эта переменная работала добавьте тэг "Ground" на вашу поверхность земли
     private bool _isGrounded;
@@ -29,6 +32,8 @@ public class PlayerControlNotPhisic : MonoBehaviour
         // но раз уж вызываем здесь, то 
         // двигать будем используя множитель fixedDeltaTimе 
         MovementLogic();
+
+        RotateCamera();
     }
 
     private void MovementLogic()
@@ -56,6 +61,13 @@ public class PlayerControlNotPhisic : MonoBehaviour
                 _rb.AddForce(Vector3.up * JumpForce);
             }
         }
+    }
+
+
+    void RotateCamera()
+    {
+        transform.Rotate(0, Input.GetAxis("Mouse X") * speedRotateCamera, 0);
+        Debug.Log(Input.GetAxis("Mouse X"));
     }
 
     void OnCollisionEnter(Collision collision)
