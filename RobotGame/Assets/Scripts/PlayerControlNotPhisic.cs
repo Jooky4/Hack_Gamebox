@@ -11,14 +11,17 @@ public class PlayerControlNotPhisic : MonoBehaviour
     private float JumpForce = 300f;
     [SerializeField]
     private float speedRotateCamera = 1;
+    [SerializeField]
+    private Animator animatorPlayer;
 
     //что бы эта переменная работала добавьте тэг "Ground" на вашу поверхность земли
     private bool _isGrounded;
-    private Rigidbody _rb;
+    private Rigidbody rb;
 
     void Start()
     {
-        _rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
+        animatorPlayer = GetComponentInChildren<Animator>();
     }
 
 
@@ -47,6 +50,15 @@ public class PlayerControlNotPhisic : MonoBehaviour
         // что бы скорость была стабильной в любом случае
         // и учитывая что мы вызываем из FixedUpdate мы умножаем на fixedDeltaTimе
         transform.Translate(movement * Speed * Time.fixedDeltaTime);
+        if (moveVertical != 0)
+        {
+            animatorPlayer.SetBool("MoveBool", true);
+        }
+        else
+        {
+            animatorPlayer.SetBool("MoveBool", false);
+
+        }
     }
 
     private void JumpLogic()
@@ -58,7 +70,7 @@ public class PlayerControlNotPhisic : MonoBehaviour
                 // Обратите внимание что я делаю на основе Vector3.up а не на основе transform.up
                 // если наш персонаж это шар -- его up может быть в том числе и вниз и влево и вправо. 
                 // Но нам нужен скачек только вверх! Потому и Vector3.up
-                _rb.AddForce(Vector3.up * JumpForce);
+                rb.AddForce(Vector3.up * JumpForce);
             }
         }
     }
