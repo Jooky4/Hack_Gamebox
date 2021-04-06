@@ -419,7 +419,6 @@ GameObject:
   - component: {fileID: 5132591313518977862}
   - component: {fileID: 5132591313521845094}
   - component: {fileID: 5132591313520746918}
-  - component: {fileID: 5132591313518755687}
   m_Layer: 0
   m_Name: robot_left_arm_polySurface9
   m_TagString: Untagged
@@ -427,19 +426,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &5132591313518755687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5132591313518755686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9135805d75883424f93be09d93ba770b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &5132591313518755688
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,12 +1474,12 @@ GameObject:
   - component: {fileID: 5241229036916897445}
   - component: {fileID: 5241229036916897448}
   m_Layer: 0
-  m_Name: Player2
+  m_Name: PlayerTest
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!54 &5241229036916897445
 Rigidbody:
   m_ObjectHideFlags: 0
