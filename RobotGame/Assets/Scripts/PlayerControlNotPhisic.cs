@@ -79,7 +79,7 @@ public class PlayerControlNotPhisic : MonoBehaviour
     void RotateCamera()
     {
         transform.Rotate(0, Input.GetAxis("Mouse X") * speedRotateCamera, 0);
-        Debug.Log(Input.GetAxis("Mouse X"));
+        //Debug.Log(Input.GetAxis("Mouse X"));
     }
 
     void OnCollisionEnter(Collision collision)
