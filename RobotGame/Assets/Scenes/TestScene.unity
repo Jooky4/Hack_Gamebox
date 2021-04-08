@@ -1130,6 +1130,97 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311110739}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1311848281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1311848285}
+  - component: {fileID: 1311848284}
+  - component: {fileID: 1311848283}
+  - component: {fileID: 1311848282}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Ground
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1311848282
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311848281}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1311848283
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311848281}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1311848284
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311848281}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1311848285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311848281}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.73, y: 0.35, z: -0.5064144}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1375124471
 GameObject:
   m_ObjectHideFlags: 0
@@ -2709,6 +2800,7 @@ GameObject:
   - component: {fileID: 5241229036916897448}
   - component: {fileID: 5241229036916897446}
   - component: {fileID: 5241229036916897447}
+  - component: {fileID: 5241229036916897449}
   m_Layer: 0
   m_Name: PlayerTest
   m_TagString: Player
@@ -2770,9 +2862,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e847b10e629cb438b267564a527f3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strengthPlayer: 0
+  strengthLegs: 0
   massPlayer: 0
   jumpForcePlayer: 0
+  armsForce: 0
 --- !u!114 &5241229036916897448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2789,6 +2882,19 @@ MonoBehaviour:
   JumpForce: 50
   speedRotateCamera: 5
   animatorPlayer: {fileID: 0}
+--- !u!65 &5241229036916897449
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5241229036916897444}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.937655, y: 13.786253, z: 4.9255395}
+  m_Center: {x: -0.048669055, y: -3.9596632, z: 0.629568}
 --- !u!4 &5241229036916897450
 Transform:
   m_ObjectHideFlags: 0
@@ -2814,7 +2920,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 5241229036916897444}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 3.842461
   m_Height: 15.03132
   m_Direction: 1
@@ -2880,7 +2986,7 @@ MonoBehaviour:
   mainCamera: {fileID: 629815569}
   pointCamera: {fileID: 5241229037575647048}
   speedTranslateCamera: 5
-  speedRotateCamera: 5
+  speedRotateCamera: 2
 --- !u!1 &5241229037953874695
 GameObject:
   m_ObjectHideFlags: 0
